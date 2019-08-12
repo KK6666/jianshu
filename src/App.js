@@ -22,7 +22,7 @@ class App extends Component {
               <div>
                 <Header />
                 {/* exact 寻找精准路径 */}
-                <Route path='/jianshu/index' exact component={Home}></Route>
+                <Route path='/' exact component={Home}></Route>
                 {/* detail：id表示路径为/detail，且需要加参数id（如1，2） */}
                 <Route path='/detail/:id' exact component={Detail}></Route>
                 <Route path='/login' exact component={Login}></Route>
