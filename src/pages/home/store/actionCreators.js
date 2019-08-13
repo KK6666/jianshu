@@ -16,7 +16,7 @@ export const setTotal = (newList)=>({
 export const getHomeInfo=()=>{
   return (dispatch)=>{
     // axios.get('/api/home.json')
-    axios.get('https://raw.githubusercontent.com/KK6666/jianshu/master/public/api/home.json')
+    axios.get('https://raw.githubusercontent.com/KK6666/jianshu/dev/public/api/home.json')
     .then((res)=>{
       const result = res.data.data;
       const action = changeHomeData(result);
@@ -38,7 +38,7 @@ export const loadMoreArticle =(page)=>{
     //这里获取数据时，可向路由添加page参数，根据后端提供的数据，page不同获取不同数据。
     // page初始值为1，第一次点击加载更多，page=1，随后page+1传递给reducer
     // 这里数据用的articleList.json里没有page相关数据，reducer中concat会将articleList.json里的数据全部连接
-    axios.get('https://raw.githubusercontent.com/KK6666/jianshu/master/public/api/articleList.json?page='+ page)
+    axios.get('https://raw.githubusercontent.com/KK6666/jianshu/dev/public/api/articleList.json?page='+ page)
     .then((res)=>{
       const data = fromJS(res.data.data)
       const action = {
