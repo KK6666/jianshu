@@ -26,7 +26,7 @@ class Header extends Component{
     const {focused,handleInputFocus,handleInputBlur,list,logout,logState} = this.props;
     return (
       <HeaderWrapper>
-        <Link to='/'>
+        <Link to='/jianshu'>
           <Logo />
         </Link>
         <Nav>
