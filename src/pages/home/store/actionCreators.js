@@ -15,8 +15,8 @@ export const setTotal = (newList)=>({
 
 export const getHomeInfo=()=>{
   return (dispatch)=>{
-    axios.get('/api/home.json')
-    // axios.get('https://raw.githubusercontent.com/KK6666/jianshu/master/public/api/home.json')
+    // axios.get('/api/home.json')
+    axios.get('https://raw.githubusercontent.com/KK6666/jianshu/master/public/api/home.json')
     .then((res)=>{
       const result = res.data.data;
       const action = changeHomeData(result);
