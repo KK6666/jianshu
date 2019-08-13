@@ -8,7 +8,7 @@ export const getBackTop=(show)=>({
 
 export const getDetailAction=(id)=>{
   return (dispatch)=>{
-    Axios.get('/api/detail.json?id='+id)
+    Axios.get('https://raw.githubusercontent.com/KK6666/jianshu/master/public/api/detail.json?id='+id)
       .then((res)=>{
         const data = (res.data.data);
 
