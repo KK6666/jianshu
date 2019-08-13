@@ -12,7 +12,6 @@ class Article extends PureComponent{
       <ArticleWrapper>
         {
           list.map( (item,index)=>{
-            console.log(33)
             return(
               <Link key={index} to={'/detail/'+item.get('id')}>
                 <ArticleItem>
