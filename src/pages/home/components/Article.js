@@ -12,6 +12,7 @@ class Article extends PureComponent{
       <ArticleWrapper>
         {
           list.map( (item,index)=>{
+            console.log(33)
             return(
               <Link key={index} to={'/detail/'+item.get('id')}>
                 <ArticleItem>
@@ -26,10 +27,12 @@ class Article extends PureComponent{
                     </ul>
                   </ArticleInfo>
                   <img className='article-pic' src={item.get('src')} alt=''/>
+    
                 </ArticleItem>
               </Link>
             ) 
           } )
+          
         }
         <LoadMore
           onClick={()=>handleLoadMore(page)}
