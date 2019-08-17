@@ -37,7 +37,7 @@ class Login extends PureComponent{
       )
     }else{
       //使用Redirect，如果登录状态，跳转会主页
-      return <Redirect to='/write' />
+      return <Redirect to='/jianshu' />
     }
   }
 }
