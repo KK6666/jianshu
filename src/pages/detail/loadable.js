@@ -7,6 +7,7 @@ const LoadableComponent = Loadable({
   loader: () => import('./'),
   // 加载过程中，页面的临时显示组件
   loading:Loading,
+  //加载时间不超过300ms不显示loading
   delay:300
 });
 
