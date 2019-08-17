@@ -15,19 +15,17 @@ export const HomeWrapper = styled.div`
     zoom:1；
   }
   width:960px;
-  margin:0 auto;
+  margin:56px auto 0;
 
-  .pic{
-    width:100%;
-    height:270px;
-    border-radius:8px;
-  }
+  
+
 `;
 
 export const HomeLeft = styled.div`
   float:left;
   width:625px;
   padding:30px 0 0 15px;
+
 `;
 
 export const HomeRight = styled.div`
@@ -67,7 +65,7 @@ export const TopicItem = styled.div`
 
 export const ArticleWrapper = styled.div`
   width:625px;
-  
+  cursor:pointer;
 `;
 
 export const ArticleItem = styled.div`
@@ -79,6 +77,7 @@ export const ArticleItem = styled.div`
     width:148px;
     height:98px;
     float:right;
+    border-radius:3px;
   }
   .article-title{
     font-size:18px;
@@ -199,6 +198,7 @@ export const DownloadRight =styled.div`
   margin-top:8.5px;
   width:143px;
   height:43px;
+  color:black;
   div:nth-of-type(1){
     font-size:15px;
     height:21px;
@@ -317,6 +317,50 @@ export const BackTop = styled.div`
   }
 `;
 
+export const SlideWrapper = styled.div`
+  margin-bottom:23px;
+  .swiper-container{
+    height:270px;
+    width:100%;
+    border-radius:10px;
+  }
+  
+  .swiper-slide img{
+    width:100%;
+    height:100%
+  }
+
+  .swiper-button-prev,.swiper-button-next{
+    opacity:0
+    width:13px;
+    height:22px;
+    background-color:rgba(0,0,0,.4);
+    background-size:13px 22px;
+    padding:13px;
+    
+    transition:opacity .2s ease-in;
+    -moz-transition:opacity .2s ease-in; /* Firefox 4 */
+    -webkit-transition:opacity .2s ease-in; /* Safari and Chrome */
+    -o-transition:opacity .2s ease-in; /* Opera */
+  }
+  // 前后按钮是absolute布局的
+  .swiper-button-prev{
+    left:0
+    border-top-right-radius:7px;
+    border-bottom-right-radius:7px;
+  }
+  .swiper-button-next{
+    right:0
+    border-top-left-radius:7px;
+    border-bottom-left-radius:7px;
+  }
+  .swiper-container:hover .swiper-button-prev{
+    opacity:1
+  }
+  .swiper-container:hover .swiper-button-next{
+    opacity:1
+  }
+`;
 
 
 
