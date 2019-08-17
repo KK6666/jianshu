@@ -1,15 +1,25 @@
 {
   "files": {
-    "main.js": "/jianshu/static/js/main.9036b276.chunk.js",
-    "main.js.map": "/jianshu/static/js/main.9036b276.chunk.js.map",
-    "runtime~main.js": "/jianshu/static/js/runtime~main.aa679cd4.js",
-    "runtime~main.js.map": "/jianshu/static/js/runtime~main.aa679cd4.js.map",
-    "static/js/2.4e93166e.chunk.js": "/jianshu/static/js/2.4e93166e.chunk.js",
-    "static/js/2.4e93166e.chunk.js.map": "/jianshu/static/js/2.4e93166e.chunk.js.map",
-    "static/js/3.cb862869.chunk.js": "/jianshu/static/js/3.cb862869.chunk.js",
-    "static/js/3.cb862869.chunk.js.map": "/jianshu/static/js/3.cb862869.chunk.js.map",
+    "main.js": "/jianshu/static/js/main.f221934c.chunk.js",
+    "main.js.map": "/jianshu/static/js/main.f221934c.chunk.js.map",
+    "runtime~main.js": "/jianshu/static/js/runtime~main.5f16b6b7.js",
+    "runtime~main.js.map": "/jianshu/static/js/runtime~main.5f16b6b7.js.map",
+    "static/css/2.acb72abc.chunk.css": "/jianshu/static/css/2.acb72abc.chunk.css",
+    "static/js/2.eff715a0.chunk.js": "/jianshu/static/js/2.eff715a0.chunk.js",
+    "static/js/2.eff715a0.chunk.js.map": "/jianshu/static/js/2.eff715a0.chunk.js.map",
+    "static/js/3.29315c4c.chunk.js": "/jianshu/static/js/3.29315c4c.chunk.js",
+    "static/js/3.29315c4c.chunk.js.map": "/jianshu/static/js/3.29315c4c.chunk.js.map",
+    "static/js/4.fe1f825b.chunk.js": "/jianshu/static/js/4.fe1f825b.chunk.js",
+    "static/js/4.fe1f825b.chunk.js.map": "/jianshu/static/js/4.fe1f825b.chunk.js.map",
     "index.html": "/jianshu/index.html",
-    "precache-manifest.50e038f77071bfc8a5766edf8ce7f489.js": "/jianshu/precache-manifest.50e038f77071bfc8a5766edf8ce7f489.js",
-    "service-worker.js": "/jianshu/service-worker.js"
+    "precache-manifest.091d38f16efc7d3ff0467d63ee3138a5.js": "/jianshu/precache-manifest.091d38f16efc7d3ff0467d63ee3138a5.js",
+    "service-worker.js": "/jianshu/service-worker.js",
+    "static/css/2.acb72abc.chunk.css.map": "/jianshu/static/css/2.acb72abc.chunk.css.map",
+    "static/media/1.png": "/jianshu/static/media/1.378196f0.png",
+    "static/media/2.png": "/jianshu/static/media/2.a3e7f05f.png",
+    "static/media/3.png": "/jianshu/static/media/3.ed9583c5.png",
+    "static/media/bottom-left.png": "/jianshu/static/media/bottom-left.7dfef21c.png",
+    "static/media/detialDownload.png": "/jianshu/static/media/detialDownload.22096669.png",
+    "static/media/middlePic.png": "/jianshu/static/media/middlePic.b2e2caa2.png"
   }
 }
