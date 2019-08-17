@@ -10,6 +10,7 @@ import Home from './pages/home/index.js';
 import Detail from './pages/detail/loadable.js';
 import Login from './pages/login';
 import Write from './pages/write';
+import DownloadPage from './pages/downloadPage/loadable.js';
 
 class App extends Component {
   render(){
@@ -27,6 +28,7 @@ class App extends Component {
                 <Route path='/detail/:id' exact component={Detail}></Route>
                 <Route path='/login' exact component={Login}></Route>
                 <Route path='/write' exact component={Write}></Route>
+                <Route path='/downloadPage' exact component={DownloadPage}></Route>
               </div>
             </BrowserRouter>
         </Provider>
