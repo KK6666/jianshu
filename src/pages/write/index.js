@@ -12,9 +12,7 @@ class Write extends PureComponent{
     const {logState} = this.props;
     if(logState){
       return(
-        <div>
-          <Wrapper>写文章</Wrapper>
-        </div>
+        <Wrapper>暂未开放，敬请期待</Wrapper>
       )
     }else{
       alert('请先登录');
