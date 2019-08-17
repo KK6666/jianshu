@@ -3,8 +3,16 @@ import logoPic from '../../static/logo.png'
 
 export const HeaderWrapper = styled.div`
   height:56px;
+  max-width:1440px;
+  min-width:960px;
   border-bottom:1px solid #f0f0f0;
-  position:relative;
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  margin:0 auto;
+  background-color: white;
+  z-index:10;
 `;
 
 export const Logo = styled.div.attrs({
@@ -21,29 +29,54 @@ export const Logo = styled.div.attrs({
   top:0
 `;
 
-export const Nav = styled.div`
-  width:945px;
+export const NavLeft = styled.div`
+  width:960px;
   height:100%;
   margin:0 auto;
-  
+  padding:0 100px;
+
+`;
+
+export const NavRight = styled.div`
+  overflow:hidden;
+  position:absolute;
+  right:0;
+  top:0;
+  .iconfont{
+    font-size:18px;
+    font-weight:400;
+    cursor:auto;
+  }
+  .writting{
+    cursor:pointing;
+  }
+  .log{
+    cursor:pointing;
+  }
 `;
 
 export const NavItem = styled.div`
   &.left {
     float:left;
     font-size:17px;
+    padding:0 18px;
+    color:black;
   }
   &.right{
     float:right;
     font-size:15px;
     color:#969696;
-    cursor:pointer;
+    margin:0 10px;
   }
   &.active{
-    color:#ea6f5a;
+    color:#ea6f5a!important;
   }
+  &.unactive:hover{
+    background:rgb(238, 238, 238);
+  }
+
   line-height:56px;
-  padding:0 15px;
+  
 `;
 
 export const SearchWrapper = styled.div`
@@ -67,7 +100,7 @@ export const SearchWrapper = styled.div`
 `;
 
 export const NavSearch = styled.input.attrs({
-  placeholder:'search'
+  placeholder:'搜索'
 })`
   width:160px;
   height:36px;
@@ -88,27 +121,19 @@ export const NavSearch = styled.input.attrs({
   &.focused{
     width:240px;
   }
-
-  //CSSTransition控制过度动画
+ //CSSTransition控制过度动画
   &.slide-enter{
-    transition:all 0.2s ease-out;
+    transition:all 0.4s ease-out;
   }
-  &.slide-enter-active{
+  &.slide-enter-active{    
     width:240px;
   }
   &.slide-exit{
-    transition:all 0.2s ease-out;
+    transition:all 0.4s ease-out;
   }
   &.slide-exit-active{
     width:160px;
   }
-
-`;
-
-export const Addition = styled.div`
-  position:absolute;
-  right:0;
-  top:0;
 `;
 
 export const Button = styled.div`
@@ -119,7 +144,6 @@ export const Button = styled.div`
   line-height:38px;
   text-align:center;
   margin-top:8px;
-  margin-right:10px;
   font-size:16px;
   &.reg{
     width:78px;
@@ -140,7 +164,7 @@ export const SearchInfo = styled.div`
   width:250px;
   box-shadow:0 0 8px rgba(0,0,0,.2);
   background: #fff;
-
+  z-index:99;
 `;
 
 export const SearchInfoTitle = styled.div`
