@@ -24,18 +24,19 @@ export const Title = styled.h4`
   text-align:center;
   font-weight: 700;
   color: #ea6f5a;
-  font-size:18px;
+  font-size:20px;
   margin-bottom:25px;
 `;
 
 export const Explain = styled.div`
   width:280px
   height:19px;
-  margin-bottom:25px;
+  margin-bottom:35px;
   text-align:center;
   font-weight: 700;
   color: #ea6f5a;
-  font-size:10px;
+  font-size:15px;
+  text-align:left;
 `;
 
 export const LogId = styled.div`
