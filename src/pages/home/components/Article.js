@@ -13,8 +13,11 @@ class Article extends PureComponent{
         {
           list.map( (item,index)=>{
             return(
-              <Link key={index} to={'/detail/'+item.get('id')}>
-                <ArticleItem>
+              // <Link key={index} to={'/detail/'+item.get('id')}>
+                <ArticleItem
+                  key={index}
+                  onClick={this.openDetail.bind(this,item)}
+                >
                   <ArticleInfo>
                     <h3 className='article-title'>{item.get('title')}</h3>
                     <p className='article-content'>{item.get('content')}</p>
@@ -28,7 +31,7 @@ class Article extends PureComponent{
                   <img className='article-pic' src={item.get('src')} alt=''/>
     
                 </ArticleItem>
-              </Link>
+              // </Link>
             ) 
           } )
           
@@ -38,6 +41,12 @@ class Article extends PureComponent{
         >阅读更多</LoadMore>
       </ArticleWrapper>
     )
+  }
+
+  // 创建新页面，跳转值对应详情页
+  openDetail(item){
+      const w=window.open('about:blank');
+      w.location.href='/jianshu?id='+item.get('id')
   }
 }
 
