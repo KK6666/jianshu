@@ -1,16 +1,24 @@
 import styled from 'styled-components';
+import pic from '../../static/img/detail/detialDownload.png'
 
 export const Wrapper= styled.div`
-  margin: 0 auto;
+  margin: 56px auto 0;
   padding-top: 20px;
   padding-bottom: 40px;
   width: 620px; 
+  position:relative;
+  .outer{
+    
+    position:absolute;
+  left:690px;
+  }
 `;
 
 export const Title= styled.h1`
   font-size: 34px;
   font-weight: 700;
   margin: 20px 0 0;
+  line-height: 1.3;
 `;
 
 export const WriterWrapper= styled.div`
@@ -84,3 +92,41 @@ export const BackTop = styled.div`
     color:#2f2f2f;
   }
 `;
+
+export const DownloadPic= styled.div`
+  width:180px;
+  height:260px;
+  //先用外层div.outer定位水平位置，再用fixed定位本身的竖直位置
+  position:fixed;
+  top:80px;
+
+  background-image:url(${pic});
+  background-size:180px 260px;
+
+  .close{
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height:20px;
+    color: #999;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-weight: 200;
+    font-size: 26px;
+    outline: none;
+    text-shadow: none;
+    cursor: pointer;
+    opacity:0.5;
+  }
+  .close:hover{
+    opacity:1;
+    font-weight: 500;
+  }
+
+  &.hide{
+    display:none;
+  }
+
+  
+`
