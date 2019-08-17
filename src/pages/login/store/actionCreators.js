@@ -4,6 +4,7 @@ import axios from 'axios';
 export const login = (sign,password)=>{
   return (dispatch)=>{
     // 匹配后端提供的账号密码，这里模拟文件里没有数据，所以全部默认为匹配成功
+    // axios.get('/api/login.json?sign='+sign+'&password=' +password )
     axios.get('https://raw.githubusercontent.com/KK6666/jianshu/dev/public/api/login.json?sign='+sign+'&password=' +password )
     .then((res)=>{
       const result = res.data;
