@@ -8,7 +8,8 @@ import {
   Title,
   LogId,
   Password,
-  Button
+  Button,
+  Explain
 } from './style';
 
 
@@ -21,6 +22,7 @@ class Login extends PureComponent{
         <LoginWrapper>
           <Wrapper>
             <Title>登录</Title>
+            <Explain>（说明：无需输入，可直接点击登录，用于演示登录退出状态，以及点击写文章前须先登录）</Explain>
             <LogId>
               <i className='iconfont'>&#xe61c;</i>
               <input placeholder="手机号或邮箱" ref={(input)=>{this.signElem=input}}></input>
@@ -35,7 +37,7 @@ class Login extends PureComponent{
       )
     }else{
       //使用Redirect，如果登录状态，跳转会主页
-      return <Redirect to='/' />
+      return <Redirect to='/write' />
     }
   }
 }
