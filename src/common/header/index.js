@@ -1,12 +1,12 @@
-import React,{Component} from 'react';
+import React,{PureComponent} from 'react';
 import {CSSTransition} from 'react-transition-group';
 import {
   HeaderWrapper,
   Logo,
-  Nav,
+  NavLeft,
+  NavRight,
   NavItem,
   NavSearch,
-  Addition,
   Button,
   SearchWrapper,
   SearchInfo,
@@ -21,30 +21,30 @@ import {actionCreators as loginActionCreators} from '../../pages/login/store'
 //注意<link>要用在<BrowserRouter>内部
 import { Link } from 'react-router-dom'
 
-class Header extends Component{
+class Header extends PureComponent{
   render(){
-    const {focused,handleInputFocus,handleInputBlur,list,logout,logState} = this.props;
+    const {focused,handleInputFocus,handleInputBlur,list,logout,logState,indexActive,downloadActive} = this.props;
+
     return (
       <HeaderWrapper>
         <Link to='/jianshu'>
           <Logo />
         </Link>
-        <Nav>
-          <NavItem className='left active'>首页</NavItem>
-          <NavItem className='left'>下载App</NavItem>
-          {
-          //从login的reducer中获取到登录状态logState，登录状态为true显示退出，为否，显示登录，且点击跳转至登录页面
-            logState ? 
-            <NavItem className='right' onClick={logout}>退出</NavItem> :
-            <Link to='/login' ><NavItem className='right' >登录</NavItem></Link>
-          }       
-          <NavItem className='right'>
-            <i className="iconfont">&#xe636;</i>
-          </NavItem>
+        <NavLeft>
+          <Link to="/jianshu">
+            <NavItem 
+              className={indexActive? 'left active':'left unactive'} 
+            >首页</NavItem>
+          </Link>
+          <Link to="/downloadPage">
+            <NavItem 
+              className={downloadActive? ' left download active':'left download unactive'}
+            >下载App</NavItem>  
+          </Link> 
           <SearchWrapper>
             <CSSTransition
               in={focused}
-              timeout={200}
+              timeout={400}
               classNames='slide'
             >
               <NavSearch 
@@ -58,15 +58,28 @@ class Header extends Component{
             >&#xe637;</i>
             {this.getListArea(focused)}
           </SearchWrapper>
-          <Addition>
+        </NavLeft>
+        <NavRight>
+          <NavItem className='right'>
             <Link to='/write'>
               <Button className='writting'>
                 <i className="iconfont">&#xe600;</i>写文章
               </Button>
             </Link>
+          </NavItem>
+          <NavItem className='right'>
             <Button className='reg'>注册</Button>
-          </Addition>
-        </Nav>
+          </NavItem>
+          {
+            //从login的reducer中获取到登录状态logState，登录状态为true显示退出，为否，显示登录，且点击跳转至登录页面
+              logState ? 
+              <NavItem className='right log' onClick={logout}>退出</NavItem> :
+              <Link to='/login' ><NavItem className='right log' >登录</NavItem></Link>
+          }  
+          <NavItem className='right'>
+            <i className="iconfont">&#xe636;</i>
+          </NavItem>
+        </NavRight>
       </HeaderWrapper>
     )
   }
@@ -136,7 +149,10 @@ const mapStateToProps = (state)=>{
     mouseIn:state.getIn(['header','mouseIn']),
     page:state.getIn(['header','page']),
     pageTotal:state.getIn(['header','pageTotal']),
-    logState:state.getIn(['login','logState'])
+    logState:state.getIn(['login','logState']),
+    // //首页。下载App按钮激活状态
+    indexActive:state.getIn(['home','indexActive']),
+    downloadActive:state.getIn(['download','downloadActive'])
   }
 }
 
@@ -187,8 +203,7 @@ const mapDispatchToProps = (dispatch)=>{
     logout(){
       const action=loginActionCreators.logout();
       dispatch(action);
-    }
-    
+    },    
   }
 }
 
