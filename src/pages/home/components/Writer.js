@@ -41,9 +41,9 @@ class Writer extends PureComponent{
 
     const newList=list.toJS();
     const writerList=[];
-    let iMax=page*2;
+    let iMax=page*5;
     if(iMax>newList.length){iMax=newList.length}
-    for(let i=(page-1)*2; i<iMax; i++){
+    for(let i=(page-1)*5; i<iMax; i++){
       writerList.push(
         <WriterItem key={newList[i].id}>
           <img className='writerImg' src={newList[i].src} alt='' />
@@ -77,6 +77,7 @@ const mapDispatch = (dispatch)=>{
       dispatch(action);
     },
     handleChangeList(page,totalPage,spin){
+      console.log(page,totalPage)
       let originAngle = spin.style.transform.replace(/[^0-9]/ig,'');
       if(originAngle){
         // 转化为10进制字符串
@@ -92,6 +93,7 @@ const mapDispatch = (dispatch)=>{
       }else{
         page=1
       }
+      console.log(page,totalPage)
       const action = changeList(page);
       dispatch(action);
     }
