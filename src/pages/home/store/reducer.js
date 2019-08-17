@@ -9,7 +9,9 @@ const defaultState = fromJS({
   writerPage:1,
   writerTotalPage:1,
   articlePage:1,
-  backTopShow:false
+  backTopShow:false,
+   //首页。下载App按钮激活状态
+  indexActive:false
 });
 
 export default (state=defaultState,action)=>{
@@ -33,6 +35,10 @@ export default (state=defaultState,action)=>{
     case constants.GET_BACK_TOP:
       return state.merge({
         backTopShow:action.show
+      })
+    case constants.INDEXACTIVE:
+      return state.merge({
+        indexActive:action.boolean
       })
     default:
       return state;
