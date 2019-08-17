@@ -21,11 +21,21 @@ export const Title = styled.h4`
   width:280px
   height:19px;
   padding:10px;
-  margin-bottom:50px;
   text-align:center;
   font-weight: 700;
   color: #ea6f5a;
   font-size:18px;
+  margin-bottom:25px;
+`;
+
+export const Explain = styled.div`
+  width:280px
+  height:19px;
+  margin-bottom:25px;
+  text-align:center;
+  font-weight: 700;
+  color: #ea6f5a;
+  font-size:10px;
 `;
 
 export const LogId = styled.div`
@@ -91,3 +101,4 @@ export const Button = styled.button`
   border:none;
   font-size:18px;
 `;
+
