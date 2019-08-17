@@ -11,10 +11,15 @@ import {
   WriterName,
   WriterInfo,
   Content,
-  BackTop
+  BackTop,
+  DownloadPic
 } from './style'
 
 class Detail extends Component{
+  constructor(props){
+    super(props);
+    this.myRef=React.createRef();
+  }
   render(){
     const {title,headPic,name,browse,time,words,read,comment,like,content} = this.props;
     return(
@@ -35,7 +40,6 @@ class Detail extends Component{
           </Writer>
         </WriterWrapper>
         <Content dangerouslySetInnerHTML={{__html: content}}>
-
           {/* <img src='https://upload-images.jianshu.io/upload_images/15233518-7d1d8baf8a548e99.com?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp' alt='' />
           <p>前阵子，我和阿里的薪酬福利专家M同学聊了一下午，M同学做了9年薪酬，和我们吐槽了很多薪酬方面的现象，也道出了少有人关注的薪酬逻辑和常识。</p>
           <p>这一次，我又找了一位阿里技术岗位的招聘专家T同学，从他的视角中，我们来看一下金三银四的招聘旺季下，10条求职的黄金规律。</p>
@@ -53,6 +57,16 @@ class Detail extends Component{
           <p>这次交谈的最后，我问了T同学一个私人的问题：现在阿里的HR是单身多还是成家立业的多啊，T同学的答案是后者。</p>
           <p>所以如果你想加入阿里，可以再等等，不着急，有能力，随时都有机会。</p> */}
         </Content>
+        <div className="outer">
+          <DownloadPic ref={this.myRef}>
+            
+              <span 
+                className="close"
+                onClick={this.hide.bind(this)}
+              >×</span>
+            
+          </DownloadPic>
+        </div>
         {this.props.backTopShow ? <BackTop onClick={this.handleBackTop} ><i className='iconfont'>&#xe60c;</i></BackTop> : null}
       </Wrapper>
     )
@@ -79,7 +93,18 @@ class Detail extends Component{
 
   //sscrollTo(xpos,ypos) 方法可把内容滚动到指定的坐标。
   handleBackTop(){
-    window.scrollTo(0,0);
+    let scrollToTop = window.setInterval(function() {
+      let pos = window.pageYOffset;
+      if ( pos > 0 ) {
+          window.scrollTo( 0, pos - 50 ); // how far to scroll on each step
+      } else {
+          window.clearInterval( scrollToTop );
+      }
+    }, 2);
+  }
+
+  hide(){
+    this.myRef.current.setAttribute("class","hide");
   }
   
 }
