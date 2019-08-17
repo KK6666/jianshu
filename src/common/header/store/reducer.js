@@ -9,7 +9,6 @@ const defaultState = fromJS({
   mouseIn:false,
   page:1,
   pageTotal:1
-  
 })
 
 //此处导出的函数输出的对象为immutable对象，即index.js中的state.header
@@ -31,8 +30,7 @@ export default (state=defaultState,action)=>{
     case contants.MOUSE_LEAVE:
       return state.set('mouseIn',false)
     case contants.PAGE_CHANGE:
-      return state.set('page',action.page)
-          
+      return state.set('page',action.page) 
     default:
         return state;
   }
