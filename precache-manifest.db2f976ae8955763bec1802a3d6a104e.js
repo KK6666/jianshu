@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2d72ee465e7ab5e208dc509e4743dfdf",
+    "revision": "63ff3e1d3899da48e5b9feb2ad9b71fb",
     "url": "/jianshu/index.html"
   },
   {
-    "revision": "56ac68e952ba520df30a",
+    "revision": "3309942bc11800432167",
     "url": "/jianshu/static/css/2.acb72abc.chunk.css"
   },
   {
-    "revision": "56ac68e952ba520df30a",
-    "url": "/jianshu/static/js/2.eff715a0.chunk.js"
+    "revision": "3309942bc11800432167",
+    "url": "/jianshu/static/js/2.7122ffa1.chunk.js"
   },
   {
-    "revision": "8824cfa4cb7e81e22310",
-    "url": "/jianshu/static/js/3.29315c4c.chunk.js"
+    "revision": "bf0092e462937fc7778d",
+    "url": "/jianshu/static/js/3.3e25d902.chunk.js"
   },
   {
-    "revision": "abaddff4ac49121ffb68",
-    "url": "/jianshu/static/js/4.fe1f825b.chunk.js"
+    "revision": "a4ca211b50af670d8584",
+    "url": "/jianshu/static/js/4.3b358826.chunk.js"
   },
   {
-    "revision": "26db50933e9687882c7a",
-    "url": "/jianshu/static/js/main.9b8e09b7.chunk.js"
+    "revision": "2e9959d1abf12d154931",
+    "url": "/jianshu/static/js/main.ae24f815.chunk.js"
   },
   {
-    "revision": "3c3618b154175272822f",
-    "url": "/jianshu/static/js/runtime~main.5f16b6b7.js"
+    "revision": "bede609f5b8f6a3d2380",
+    "url": "/jianshu/static/js/runtime~main.49a4b907.js"
   },
   {
     "revision": "378196f0f0c87fee66210c957722605c",
